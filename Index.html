@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8-Week Cut Plan · Full Planner</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── PALETTE FROM PHOTO ── */
+/* olive boot: #5c5c3a / #7a7a4a */
+/* dusty blue chalk: #8fadb8 / #b8d0d9 / #ddeaee */
+/* lavender chalk: #a896b4 / #d4c8dc / #ece6f0 */
+/* warm concrete: #b8a898 / #e8e0d6 / #f4f1ed */
+:root {
+  --olive:#5c5c3a;
+  --olive-mid:#7a7a4a;
+  --olive-pale:#d4d4b8;
+  --blue:#6b9aab;
+  --blue-mid:#8fadb8;
+  --blue-pale:#ddeaee;
+  --blue-lt:#edf4f7;
+  --lav:#8c7a9e;
+  --lav-mid:#a896b4;
+  --lav-pale:#d4c8dc;
+  --lav-lt:#ece6f0;
+  --concrete:#b8a898;
+  --concrete-lt:#e8e0d6;
+  --concrete-pale:#f4f1ed;
+  --offwhite:#faf8f5;
+  --charcoal:#2e2c28;
+  --muted:#7a746c;
+  --border:#d8d0c8;
+  --pro:#5c5c3a;
+  --fib:#6b9aab;
+  --fat:#8c7a9e;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--offwhite);color:var(--charcoal);line-height:1.65;}
+a{color:var(--olive);text-decoration:none;border-bottom:1px solid var(--olive-pale);transition:color .2s;}
+a:hover{color:var(--lav);border-color:var(--lav-pale);}
+
+/* ── HEADER ── */
+.hdr{background:var(–olive);padding:44px 32px 0;position:relative;overflow:hidden;color:white;}
+.hdr::before{content:’’;position:absolute;bottom:-1px;left:0;right:0;height:28px;background:var(–offwhite);border-radius:28px 28px 0 0;}
+.hdr::after{content:’’;position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,0.05);}
+.hdr-inner{max-width:960px;margin:0 auto;}
+.hdr-tag{font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.6;margin-bottom:8px;}
+.hdr h1{font-family:‘Lora’,serif;font-size:clamp(24px,4vw,38px);font-weight:700;margin-bottom:8px;}
+.hdr h1 em{font-style:italic;color:#c8c89e;}
+.hdr-sub{font-size:13px;opacity:.72;margin-bottom:6px;}
+.allergy-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(0,0,0,0.25);border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:7px 13px;font-size:12px;margin-bottom:22px;}
+.allergy-pill strong{color:#ddeaee;}
+
+/* ── TABS ── */
+.tabs{display:flex;gap:3px;position:relative;z-index:2;flex-wrap:wrap;}
+.tab{padding:11px 20px;font-size:13px;font-weight:600;border-radius:10px 10px 0 0;cursor:pointer;background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.72);border:none;transition:all .2s;font-family:inherit;}
+.tab:hover{background:rgba(255,255,255,0.22);color:white;}
+.tab.active{background:var(–offwhite);color:var(–charcoal);}
+
+/* ── WRAPPER ── */
+.wrap{max-width:960px;margin:0 auto;padding:30px 22px 80px;}
+.panel{display:none;}
+.panel.active{display:block;}
+.sec-title{font-family:‘Lora’,serif;font-size:22px;font-weight:700;color:var(–olive);margin-bottom:4px;}
+.sec-sub{font-size:13px;color:var(–muted);margin-bottom:22px;}
+.sep{height:1px;background:var(–border);margin:32px 0;}
+
+/* ── STRATEGY CARD ── */
+.strategy-card{background:white;border:1px solid var(–border);border-radius:16px;padding:22px 26px;margin-bottom:36px;}
+.strategy-card h3{font-family:‘Lora’,serif;font-size:16px;color:var(–olive);margin-bottom:12px;}
+.pa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;}
+.pa-item{background:var(–concrete-pale);border-radius:11px;padding:13px 14px;}
+.pa-emoji{font-size:20px;margin-bottom:5px;}
+.pa-name{font-size:13px;font-weight:700;color:var(–charcoal);margin-bottom:2px;}
+.pa-uses{font-size:11px;color:var(–muted);line-height:1.5;}
+.pa-days{font-size:10px;font-weight:700;color:var(–olive);margin-top:4px;}
+
+/* ── NUTRITION GRID ── */
+.nut-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:1px;background:var(–border);border-radius:14px;overflow:hidden;margin-bottom:34px;}
+.nut-cell{background:white;padding:16px 12px;text-align:center;}
+.nut-val{font-family:‘Lora’,serif;font-size:26px;font-weight:700;color:var(–olive);display:block;}
+.nut-label{font-size:10px;color:var(–muted);text-transform:uppercase;letter-spacing:1px;}
+
+/* ── MORNING CARD ── */
+.morning-card{background:linear-gradient(135deg,var(–blue),var(–blue-mid));border-radius:14px;padding:18px 22px;color:white;margin-bottom:32px;display:flex;align-items:center;gap:14px;}
+.morning-card h3{font-family:‘Lora’,serif;font-size:15px;margin-bottom:2px;}
+.morning-card p{font-size:12px;opacity:.88;}
+
+/* ── MACRO LEGEND ── */
+.macro-legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;font-size:12px;}
+.ml-item{display:flex;align-items:center;gap:4px;color:var(–muted);}
+.ml-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.ml-pro{background:var(–pro);} .ml-fib{background:var(–fib);} .ml-fat{background:var(–fat);}
+
+/* ── DAY CARDS ── */
+.day-card{background:white;border-radius:14px;border:1px solid var(–border);overflow:hidden;margin-bottom:11px;}
+.day-hdr{background:var(–concrete-pale);padding:11px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(–border);flex-wrap:wrap;gap:7px;}
+.day-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(–muted);}
+.day-name{font-family:‘Lora’,serif;font-size:16px;font-weight:700;}
+.day-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.day-cals{font-size:11px;font-weight:600;background:var(–lav-pale);color:var(–lav);padding:3px 10px;border-radius:99px;}
+.day-macros{font-size:11px;display:flex;gap:6px;}
+.dm-pro{color:var(–pro);font-weight:600;} .dm-fib{color:var(–fib);font-weight:600;} .dm-fat{color:var(–fat);font-weight:600;}
+.reuse-bar{background:var(–blue-lt);border-bottom:1px solid #c8dde5;padding:6px 18px;font-size:11px;color:var(–blue);font-weight:600;}
+
+/* ── MEAL TABLE ── */
+.mt{width:100%;border-collapse:collapse;}
+.mt tr{border-bottom:1px solid var(–concrete-pale);}
+.mt tr:last-child{border-bottom:none;}
+.mt td{padding:9px 18px;vertical-align:top;}
+.mt-time{width:78px;font-size:10px;color:var(–muted);text-transform:uppercase;letter-spacing:1px;padding-top:11px;font-weight:600;white-space:nowrap;}
+.mn{font-size:13px;font-weight:600;color:var(–charcoal);}
+.md{font-size:12px;color:var(–muted);margin-top:2px;line-height:1.5;}
+.ml-link{display:inline-block;margin-top:3px;font-size:11px;font-weight:600;}
+.nyt{display:inline-block;background:#1a1a1a;color:white;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 6px;border-radius:3px;margin-right:4px;vertical-align:middle;}
+.pills{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px;}
+.pill{font-size:10px;font-weight:600;padding:2px 8px;border-radius:99px;}
+.pp{background:#e8e8d4;color:var(–pro);}
+.pf{background:var(–blue-lt);color:var(–blue);}
+.pt{background:var(–lav-lt);color:var(–lav);}
+.pc{background:#efefef;color:#555;}
+.mt-cal{width:56px;text-align:right;font-size:12px;font-weight:600;color:var(–olive);padding-top:11px;white-space:nowrap;}
+
+/* ── PREP BLOCK (inside meal tab) ── */
+.prep-block{background:linear-gradient(135deg,var(–olive),var(–olive-mid));color:white;border-radius:14px;padding:22px 24px;margin:28px 0;}
+.prep-block h3{font-family:‘Lora’,serif;font-size:16px;margin-bottom:12px;}
+.prep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;}
+.prep-item-box{background:rgba(255,255,255,0.13);border-radius:10px;padding:13px;}
+.pib-title{font-weight:700;font-size:12px;margin-bottom:4px;}
+.pib-desc{font-size:11px;opacity:.84;line-height:1.5;}
+
+/* ══════ SHOPPING ══════ */
+.shop-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+.shop-badge{background:white;border:1px solid var(–border);border-radius:99px;padding:5px 13px;font-size:12px;font-weight:600;color:var(–olive);}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px;margin-bottom:28px;}
+.shop-cat{background:white;border-radius:14px;border:1px solid var(–border);overflow:hidden;}
+.shop-cat-hdr{padding:11px 16px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(–border);}
+.cat-icon{font-size:17px;}
+.cat-name{font-weight:700;font-size:13px;}
+.cat-count{margin-left:auto;font-size:10px;color:var(–muted);background:var(–concrete-pale);padding:2px 7px;border-radius:99px;}
+.shop-item{display:flex;align-items:flex-start;gap:9px;padding:7px 16px;cursor:pointer;transition:background .15s;border-bottom:1px solid var(–concrete-pale);}
+.shop-item:last-child{border-bottom:none;}
+.shop-item:hover{background:var(–concrete-pale);}
+.shop-item.checked .si-label{text-decoration:line-through;opacity:.45;}
+.si-cb{width:17px;height:17px;border-radius:4px;border:2px solid var(–border);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.shop-item.checked .si-cb{background:var(–olive);border-color:var(–olive);}
+.si-ck{color:white;font-size:10px;display:none;}
+.shop-item.checked .si-ck{display:block;}
+.si-label{font-size:12px;color:var(–charcoal);flex:1;}
+.si-qty{font-size:10px;color:var(–muted);font-weight:600;white-space:nowrap;margin-top:2px;}
+.clear-btn{background:var(–concrete-pale);border:1px solid var(–border);border-radius:9px;padding:7px 16px;font-size:12px;font-weight:600;color:var(–muted);cursor:pointer;font-family:inherit;transition:all .2s;}
+.clear-btn:hover{background:var(–lav-pale);color:var(–lav);}
+.hummus-card{background:var(–lav-lt);border:1px solid var(–lav-pale);border-radius:12px;padding:16px 20px;margin-bottom:24px;font-size:13px;}
+.hummus-card h4{font-family:‘Lora’,serif;font-size:14px;color:var(–lav);margin-bottom:6px;}
+.hummus-card p{color:var(–muted);font-size:12px;line-height:1.6;}
+
+/* ══════ PREP LIST ══════ */
+.prep-intro{background:linear-gradient(135deg,var(–olive),var(–olive-mid));border-radius:14px;padding:20px 24px;color:white;margin-bottom:24px;}
+.prep-intro h3{font-family:‘Lora’,serif;font-size:16px;margin-bottom:5px;}
+.prep-intro p{font-size:13px;opacity:.86;}
+.prep-section{margin-bottom:24px;}
+.prep-sec-title{display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;padding:11px 16px;border-radius:11px 11px 0 0;border:1px solid var(–border);}
+.ps-sun{background:var(–concrete-pale);color:var(–concrete);border-color:#d0c4b8;}
+.ps-weekly{background:var(–olive-pale);color:var(–olive);border-color:#c4c4a0;}
+.ps-daily{background:var(–blue-lt);color:var(–blue);border-color:#c0d8e2;}
+.prep-items-wrap{background:white;border:1px solid var(–border);border-top:none;border-radius:0 0 11px 11px;overflow:hidden;}
+.prep-row{display:flex;align-items:flex-start;gap:11px;padding:11px 16px;border-bottom:1px solid var(–concrete-pale);cursor:pointer;transition:background .15s;}
+.prep-row:last-child{border-bottom:none;}
+.prep-row:hover{background:var(–concrete-pale);}
+.prep-row.checked .pr-label{text-decoration:line-through;opacity:.45;}
+.pr-cb{width:19px;height:19px;border-radius:5px;border:2px solid var(–border);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.prep-row.checked .pr-cb{background:var(–olive);border-color:var(–olive);}
+.prep-row.checked .pr-cb::after{content:‘✓’;color:white;font-size:11px;font-weight:700;}
+.pr-body{flex:1;}
+.pr-label{font-size:13px;color:var(–charcoal);}
+.pr-note{font-size:11px;color:var(–muted);margin-top:2px;line-height:1.5;}
+.pr-time{font-size:10px;font-weight:700;color:var(–muted);background:var(–concrete-pale);padding:2px 8px;border-radius:99px;flex-shrink:0;white-space:nowrap;}
+
+/* ══════ SCHEDULE ══════ */
+.day-tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:20px;}
+.day-tab{padding:7px 15px;border-radius:99px;font-size:12px;font-weight:600;cursor:pointer;border:2px solid var(–border);background:white;color:var(–muted);transition:all .2s;font-family:inherit;}
+.day-tab:hover{border-color:var(–blue-mid);color:var(–blue);}
+.day-tab.active{background:var(–olive);border-color:var(–olive);color:white;}
+.day-tab.rest.active{background:var(–muted);border-color:var(–muted);}
+.day-panel{display:none;}
+.day-panel.active{display:block;}
+
+.dhc{border-radius:14px;padding:18px 22px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.dhc-str{background:linear-gradient(135deg,var(–olive),var(–olive-mid));color:white;}
+.dhc-hit{background:linear-gradient(135deg,var(–lav),var(–lav-mid));color:white;}
+.dhc-rec{background:var(–concrete-pale);color:var(–charcoal);}
+.dhc-car{background:linear-gradient(135deg,var(–blue),var(–blue-mid));color:white;}
+.dhc-rst{background:var(–concrete-lt);color:var(–muted);}
+.dhc-left h2{font-family:‘Lora’,serif;font-size:19px;font-weight:700;margin-bottom:2px;}
+.dhc-left p{font-size:12px;opacity:.82;}
+.dhc-badges{display:flex;gap:7px;flex-wrap:wrap;}
+.dhc-badge{background:rgba(255,255,255,0.2);font-size:11px;font-weight:600;padding:3px 11px;border-radius:99px;}
+.dhc-rec .dhc-badge,.dhc-rst .dhc-badge{background:var(–border);color:var(–muted);}
+
+.sched-list{display:flex;flex-direction:column;gap:5px;}
+.si2{display:grid;grid-template-columns:76px 26px 1fr 22px;gap:10px;align-items:start;padding:11px 16px;background:white;border:1px solid var(–border);border-radius:11px;cursor:pointer;transition:background .15s;}
+.si2:hover{background:var(–concrete-pale);}
+.si2.done{opacity:.5;}
+.si2.done .si-title{text-decoration:line-through;}
+.si-time{font-size:10px;font-weight:700;color:var(–muted);letter-spacing:.5px;padding-top:2px;}
+.si-icon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.ic-meal{background:#e8e8d4;} .ic-wk{background:var(–lav-lt);} .ic-water{background:var(–blue-lt);} .ic-ritual{background:var(–concrete-lt);} .ic-rest{background:var(–concrete-pale);}
+.si-body{flex:1;}
+.si-title{font-size:13px;font-weight:600;color:var(–charcoal);}
+.si-detail{font-size:11px;color:var(–muted);margin-top:2px;line-height:1.5;}
+.si-macros{font-size:10px;margin-top:3px;display:flex;gap:5px;flex-wrap:wrap;}
+.sm-p{color:var(–pro);font-weight:600;} .sm-f{color:var(–fib);font-weight:600;} .sm-t{color:var(–fat);font-weight:600;}
+.si-cb2{width:20px;height:20px;border-radius:5px;border:2px solid var(–border);flex-shrink:0;margin-top:2px;display:flex;align-items:center;justify-content:center;transition:all .15s;}
+.si2.done .si-cb2{background:var(–olive);border-color:var(–olive);}
+.si2.done .si-cb2::after{content:‘✓’;color:white;font-size:10px;font-weight:700;}
+
+.day-total{background:var(–concrete-pale);border:1px solid var(–border);border-radius:11px;padding:13px 16px;margin-top:14px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;}
+.dt-item{text-align:center;}
+.dt-val{font-family:‘Lora’,serif;font-size:18px;font-weight:700;color:var(–olive);display:block;}
+.dt-label{font-size:10px;color:var(–muted);text-transform:uppercase;letter-spacing:1px;}
+
+@media(max-width:520px){
+.hdr{padding:32px 16px 0;}
+.wrap{padding:22px 14px 60px;}
+.mt td{padding:8px 12px;}
+.mt-time{width:62px;}
+.si2{grid-template-columns:62px 24px 1fr 20px;gap:7px;padding:9px 12px;}
+.shop-grid{grid-template-columns:1fr;}
+}
+</style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div class="hdr">
+  <div class="hdr-inner">
+    <div class="hdr-tag">8-Week Cut Plan · Streamlined Edition</div>
+    <h1>Your Full<br><em>Weekly Planner</em></h1>
+    <div class="hdr-sub">Meal Plan · Shopping · Prep · Daily Schedule</div>
+    <div class="allergy-pill">⚠️ <strong>Sesame-free · Coconut-free</strong> · Chicken Breast · Hard Boiled Eggs</div>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('meals',this)">🥗 Meal Plan</button>
+      <button class="tab" onclick="switchTab('shop',this)">🛒 Shopping</button>
+      <button class="tab" onclick="switchTab('prep',this)">🍳 Prep List</button>
+      <button class="tab" onclick="switchTab('sched',this)">📅 Schedule</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- ══════════════════════════════════════
+     TAB 1 · MEAL PLAN
+══════════════════════════════════════ -->
+
+<div class="panel active" id="panel-meals">
+  <div class="sec-title">The Streamlined Strategy</div>
+  <div class="sec-sub">3 proteins batch-cooked Sunday. Dressed differently each day. Different flavors, half the work.</div>
+
+  <div class="strategy-card">
+    <h3>🧠 Prep Once, Eat All Week</h3>
+    <div class="pa-grid">
+      <div class="pa-item"><div class="pa-emoji">🍗</div><div class="pa-name">Chicken Breast (1.5 lbs)</div><div class="pa-uses">Batch grilled Sunday → Asian bowl Tue · Italian herb + white beans Fri · Sheet pan Sun</div><div class="pa-days">TUE · FRI · SUN</div></div>
+      <div class="pa-item"><div class="pa-emoji">🐟</div><div class="pa-name">Salmon (4 oz each)</div><div class="pa-uses">Italian herb Mon dinner · Miso butter Sat dinner — cook fresh each time, 12 min</div><div class="pa-days">MON · SAT</div></div>
+      <div class="pa-item"><div class="pa-emoji">🦐</div><div class="pa-name">Shrimp (frozen, 1 lb)</div><div class="pa-uses">Stays frozen · cooks in 5 min from frozen day-of · tomato pasta Wed · scampi orzo Thu</div><div class="pa-days">WED · THU (cook day-of)</div></div>
+      <div class="pa-item"><div class="pa-emoji">🥚</div><div class="pa-name">Hard Boiled Eggs (8–10)</div><div class="pa-uses">Batch Sunday · on toast Mon/Fri · in Niçoise Wed · on shakshuka Sat</div><div class="pa-days">ALL WEEK — done Sunday</div></div>
+      <div class="pa-item"><div class="pa-emoji">🫙</div><div class="pa-name">Greek Yogurt</div><div class="pa-uses">Daily — breakfast bowls, evening snack, subs for coconut milk in stews</div><div class="pa-days">EVERY DAY — no cooking</div></div>
+      <div class="pa-item"><div class="pa-emoji">🫘</div><div class="pa-name">Lentils + Chickpeas</div><div class="pa-uses">Big lentil pot Sunday · canned chickpeas straight from tin · Martha Stewart hummus Thu snack</div><div class="pa-days">MON · FRI · SUN + Thu snack</div></div>
+    </div>
+  </div>
+
+  <div class="sec-title">Daily Nutrition Targets</div>
+  <div class="sec-sub">~500–600 cal deficit from estimated TDEE of ~2,050 cal</div>
+  <div class="nut-grid">
+    <div class="nut-cell"><span class="nut-val">1,500</span><span class="nut-label">Calories</span></div>
+    <div class="nut-cell"><span class="nut-val">130g</span><span class="nut-label">Protein</span></div>
+    <div class="nut-cell"><span class="nut-val">130g</span><span class="nut-label">Carbs</span></div>
+    <div class="nut-cell"><span class="nut-val">47g</span><span class="nut-label">Fat</span></div>
+    <div class="nut-cell"><span class="nut-val">25g+</span><span class="nut-label">Fiber</span></div>
+    <div class="nut-cell"><span class="nut-val">2.5L</span><span class="nut-label">Water</span></div>
+  </div>
+
+  <div class="morning-card">
+    <div style="font-size:28px;flex-shrink:0;">🍵</div>
+    <div><h3>Every Morning — Matcha Almond Latte (~70 cal · P:1g · F:0g · T:2g)</h3><p>1 tsp ceremonial matcha + 8 oz unsweetened almond milk. Add cinnamon or vanilla. Counts toward daily calories.</p></div>
+  </div>
+
+  <div class="sec-title">Weekly Meal Plan</div>
+  <div class="sec-sub">🐟 fish · 🍗 chicken breast · 🌿 vegetarian · ♻️ uses batch-prepped protein. One bread all week: Dave's Killer Bread White Done Right.</div>
+  <div class="macro-legend">
+    <div class="ml-item"><div class="ml-dot ml-pro"></div><strong>P</strong>=Protein</div>
+    <div class="ml-item"><div class="ml-dot ml-fib"></div><strong>F</strong>=Fiber</div>
+    <div class="ml-item"><div class="ml-dot ml-fat"></div><strong>T</strong>=Fat (g per meal)</div>
+  </div>
+
+  <!-- DAY 1 · MONDAY -->
+
+  <div class="day-card">
+    <div class="day-hdr">
+      <div><div class="day-label">Day 1 · Monday</div><div class="day-name">Strength Day Fuel</div></div>
+      <div class="day-right"><div class="day-macros"><span class="dm-pro">P:128g</span><span class="dm-fib">F:27g</span><span class="dm-fat">T:46g</span></div><div class="day-cals">~1,500 cal</div></div>
+    </div>
+    <div class="reuse-bar">♻️ batch hard boiled eggs · batch lentils · batch brown rice</div>
+    <table class="mt">
+      <tr><td class="mt-time">Breakfast</td><td>
+        <div class="mn">Avocado Toast + Hard Boiled Egg</div>
+        <div class="md">1 slice Dave's Killer Bread White Done Right, ¼ avocado mashed with lemon & sea salt, 1 hard boiled egg sliced on top, red pepper flakes, handful of arugula</div>
+        <div class="pills"><span class="pill pp">P:11g</span><span class="pill pf">F:5g</span><span class="pill pt">T:13g</span><span class="pill pc">330 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1017721-avocado-toast" target="_blank"><span class="nyt">NYT</span>Avocado Toast →</a>
+      </td><td class="mt-cal">330</td></tr>
+      <tr><td class="mt-time">Lunch</td><td>
+        <div class="mn">🌿 Lentil Bowl with Roasted Veg & Feta</div>
+        <div class="md">½ cup batch lentils, ½ cup quinoa, Sunday's roasted zucchini & bell pepper, lemon-olive oil dressing, feta crumble</div>
+        <div class="pills"><span class="pill pp">P:22g</span><span class="pill pf">F:10g</span><span class="pill pt">T:10g</span><span class="pill pc">420 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1019661-lentil-and-chickpea-salad-with-feta-and-tahini" target="_blank"><span class="nyt">NYT</span>Lentil Salad (lemon-olive oil, no tahini) →</a>
+      </td><td class="mt-cal">420</td></tr>
+      <tr><td class="mt-time">Snack</td><td>
+        <div class="mn">Apple + Almond Butter</div>
+        <div class="md">1 medium apple, 1.5 tbsp almond butter</div>
+        <div class="pills"><span class="pill pp">P:4g</span><span class="pill pf">F:5g</span><span class="pill pt">T:9g</span><span class="pill pc">200 cal</span></div>
+      </td><td class="mt-cal">200</td></tr>
+      <tr><td class="mt-time">Dinner</td><td>
+        <div class="mn">🐟 Italian Herb Salmon + Asparagus & Brown Rice</div>
+        <div class="md">4 oz salmon with lemon, garlic & herbs (cook fresh, 12 min), 1 cup asparagus, ½ cup batch brown rice</div>
+        <div class="pills"><span class="pill pp">P:32g</span><span class="pill pf">F:5g</span><span class="pill pt">T:12g</span><span class="pill pc">480 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/7816-roasted-salmon-glazed-with-brown-sugar-and-mustard" target="_blank"><span class="nyt">NYT</span>Brown Sugar & Mustard Glazed Salmon →</a>
+      </td><td class="mt-cal">480</td></tr>
+      <tr><td class="mt-time">Evening</td><td>
+        <div class="mn">½ cup cottage cheese + cucumber slices</div>
+        <div class="pills"><span class="pill pp">P:14g</span><span class="pill pf">F:0g</span><span class="pill pt">T:1g</span><span class="pill pc">75 cal</span></div>
+      </td><td class="mt-cal">75</td></tr>
+    </table>
+  </div>
+
+  <!-- DAY 2 · TUESDAY -->
+
+  <div class="day-card">
+    <div class="day-hdr">
+      <div><div class="day-label">Day 2 · Tuesday</div><div class="day-name">Asian-Inspired Day</div></div>
+      <div class="day-right"><div class="day-macros"><span class="dm-pro">P:131g</span><span class="dm-fib">F:26g</span><span class="dm-fat">T:44g</span></div><div class="day-cals">~1,495 cal</div></div>
+    </div>
+    <div class="reuse-bar">♻️ batch chicken breast · batch brown rice · Sunday's roasted broccoli & snap peas</div>
+    <table class="mt">
+      <tr><td class="mt-time">Breakfast</td><td>
+        <div class="mn">Greek Yogurt Granola Bowl</div>
+        <div class="md">¾ cup nonfat Greek yogurt, ½ cup mixed berries, 2 tbsp sesame-free granola, 1 tsp honey</div>
+        <div class="pills"><span class="pill pp">P:18g</span><span class="pill pf">F:4g</span><span class="pill pt">T:7g</span><span class="pill pc">330 cal</span></div>
+      </td><td class="mt-cal">330</td></tr>
+      <tr><td class="mt-time">Lunch</td><td>
+        <div class="mn">🍗 Asian Chicken Bowl</div>
+        <div class="md">4 oz sliced batch chicken breast, batch brown rice, reheated broccoli & snap peas, soy-ginger-garlic sauce (soy + lemon juice + ginger + olive oil — no sesame oil)</div>
+        <div class="pills"><span class="pill pp">P:36g</span><span class="pill pf">F:7g</span><span class="pill pt">T:8g</span><span class="pill pc">440 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1018938-soy-glazed-chicken" target="_blank"><span class="nyt">NYT</span>Soy-Glazed Chicken →</a>
+      </td><td class="mt-cal">440</td></tr>
+      <tr><td class="mt-time">Snack</td><td>
+        <div class="mn">Edamame + Rice Cakes</div>
+        <div class="md">½ cup shelled edamame, 2 plain sesame-free rice cakes, sea salt</div>
+        <div class="pills"><span class="pill pp">P:10g</span><span class="pill pf">F:4g</span><span class="pill pt">T:3g</span><span class="pill pc">190 cal</span></div>
+      </td><td class="mt-cal">190</td></tr>
+      <tr><td class="mt-time">Dinner</td><td>
+        <div class="mn">🌿 Miso Chickpea & Broccoli Bowl</div>
+        <div class="md">1 can chickpeas in miso-garlic glaze (olive oil, no sesame), reheated batch broccoli, ½ cup batch brown rice, miso broth on the side</div>
+        <div class="pills"><span class="pill pp">P:20g</span><span class="pill pf">F:9g</span><span class="pill pt">T:11g</span><span class="pill pc">445 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1019436-miso-glazed-tofu" target="_blank"><span class="nyt">NYT</span>Miso Glaze — apply to chickpeas →</a>
+      </td><td class="mt-cal">445</td></tr>
+      <tr><td class="mt-time">Evening</td><td>
+        <div class="mn">1 cup Greek yogurt + cinnamon + honey drizzle</div>
+        <div class="pills"><span class="pill pp">P:17g</span><span class="pill pf">F:0g</span><span class="pill pt">T:0g</span><span class="pill pc">90 cal</span></div>
+      </td><td class="mt-cal">90</td></tr>
+    </table>
+  </div>
+
+  <!-- DAY 3 · WEDNESDAY -->
+
+  <div class="day-card">
+    <div class="day-hdr">
+      <div><div class="day-label">Day 3 · Wednesday</div><div class="day-name">Italian Night</div></div>
+      <div class="day-right"><div class="day-macros"><span class="dm-pro">P:122g</span><span class="dm-fib">F:24g</span><span class="dm-fat">T:47g</span></div><div class="day-cals">~1,500 cal</div></div>
+    </div>
+    <div class="reuse-bar">♻️ batch hard boiled egg in Niçoise · shrimp cooks fresh in 5 min · orzo used for pasta tonight</div>
+    <table class="mt">
+      <tr><td class="mt-time">Breakfast</td><td>
+        <div class="mn">Overnight Oats</div>
+        <div class="md">½ cup rolled oats, ¾ cup almond milk, 1 tbsp flaxseed, ½ cup strawberries, 1 tbsp honey — prepped Tuesday night, grab from fridge</div>
+        <div class="pills"><span class="pill pp">P:8g</span><span class="pill pf">F:7g</span><span class="pill pt">T:6g</span><span class="pill pc">350 cal</span></div>
+      </td><td class="mt-cal">350</td></tr>
+      <tr><td class="mt-time">Lunch</td><td>
+        <div class="mn">🐟 Tuna Niçoise Salad</div>
+        <div class="md">4 oz canned tuna, arugula & mixed greens, cherry tomatoes, cucumber, 1 batch hard boiled egg sliced, olives, red wine vinaigrette — 3 min assembly</div>
+        <div class="pills"><span class="pill pp">P:38g</span><span class="pill pf">F:4g</span><span class="pill pt">T:14g</span><span class="pill pc">390 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1012720-salad-nicoise" target="_blank"><span class="nyt">NYT</span>Salade Niçoise →</a>
+      </td><td class="mt-cal">390</td></tr>
+      <tr><td class="mt-time">Snack</td><td>
+        <div class="mn">Protein Smoothie</div>
+        <div class="md">1 scoop vanilla protein powder, 1 cup almond milk, ½ banana, handful spinach — blend from Sunday freezer pack</div>
+        <div class="pills"><span class="pill pp">P:24g</span><span class="pill pf">F:2g</span><span class="pill pt">T:3g</span><span class="pill pc">200 cal</span></div>
+      </td><td class="mt-cal">200</td></tr>
+      <tr><td class="mt-time">Dinner</td><td>
+        <div class="mn">🦐 Shrimp & Tomato Orzo</div>
+        <div class="md">4 oz shrimp (5 min), ½ cup orzo, canned diced tomatoes, garlic, olive oil, fresh basil, Parmesan — using orzo instead of spaghetti keeps one pasta on the list</div>
+        <div class="pills"><span class="pill pp">P:32g</span><span class="pill pf">F:4g</span><span class="pill pt">T:11g</span><span class="pill pc">490 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1021078-shrimp-and-tomato-pasta" target="_blank"><span class="nyt">NYT</span>Shrimp & Tomato Pasta (use orzo) →</a>
+      </td><td class="mt-cal">490</td></tr>
+      <tr><td class="mt-time">Evening</td><td>
+        <div class="mn">2 squares dark chocolate (70%+) + herbal tea</div>
+        <div class="pills"><span class="pill pp">P:1g</span><span class="pill pf">F:1g</span><span class="pill pt">T:4g</span><span class="pill pc">70 cal</span></div>
+      </td><td class="mt-cal">70</td></tr>
+    </table>
+  </div>
+
+  <!-- DAY 4 · THURSDAY -->
+
+  <div class="day-card">
+    <div class="day-hdr">
+      <div><div class="day-label">Day 4 · Thursday</div><div class="day-name">Veggie Power Day</div></div>
+      <div class="day-right"><div class="day-macros"><span class="dm-pro">P:118g</span><span class="dm-fib">F:30g</span><span class="dm-fat">T:43g</span></div><div class="day-cals">~1,490 cal</div></div>
+    </div>
+    <div class="reuse-bar">♻️ batch lentil soup · batch hard boiled egg · batch roasted veg — zero cooking for breakfast & lunch</div>
+    <table class="mt">
+      <tr><td class="mt-time">Breakfast</td><td>
+        <div class="mn">Veggie Scramble + Toast</div>
+        <div class="md">2 eggs + 2 egg whites scrambled with reheated Sunday roasted veg (bell pepper, zucchini), 1 slice Dave's Killer Bread, thin avocado spread</div>
+        <div class="pills"><span class="pill pp">P:22g</span><span class="pill pf">F:4g</span><span class="pill pt">T:12g</span><span class="pill pc">335 cal</span></div>
+      </td><td class="mt-cal">335</td></tr>
+      <tr><td class="mt-time">Lunch</td><td>
+        <div class="mn">🌿 Lentil Soup + Hard Boiled Egg</div>
+        <div class="md">2 cups batch lentil soup reheated, 1 hard boiled egg halved on top, side of baby carrots</div>
+        <div class="pills"><span class="pill pp">P:24g</span><span class="pill pf">F:15g</span><span class="pill pt">T:4g</span><span class="pill pc">380 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1019739-lentil-soup-with-lots-of-lemon" target="_blank"><span class="nyt">NYT</span>Lentil Soup with Lots of Lemon →</a>
+      </td><td class="mt-cal">380</td></tr>
+      <tr><td class="mt-time">Snack</td><td>
+        <div class="mn">Martha Stewart Hummus + Veggies</div>
+        <div class="md">3 tbsp homemade hummus (chickpeas, lemon, garlic, olive oil, cumin — no tahini), pre-cut celery, bell pepper & carrots from Sunday</div>
+        <div class="pills"><span class="pill pp">P:4g</span><span class="pill pf">F:4g</span><span class="pill pt">T:5g</span><span class="pill pc">155 cal</span></div>
+        <a class="ml-link" href="https://www.marthastewart.com/334974/hummus-without-tahini" target="_blank">🌿 Martha Stewart Hummus (no tahini) →</a>
+      </td><td class="mt-cal">155</td></tr>
+      <tr><td class="mt-time">Dinner</td><td>
+        <div class="mn">🦐 Shrimp Scampi with Orzo</div>
+        <div class="md">4 oz shrimp (5 min cook), ½ cup orzo, white wine, garlic, lemon, parsley, Parmesan</div>
+        <div class="pills"><span class="pill pp">P:30g</span><span class="pill pf">F:2g</span><span class="pill pt">T:11g</span><span class="pill pc">430 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1023071-shrimp-scampi-with-orzo" target="_blank"><span class="nyt">NYT</span>Shrimp Scampi with Orzo →</a>
+      </td><td class="mt-cal">430</td></tr>
+      <tr><td class="mt-time">Evening</td><td>
+        <div class="mn">Mini Babybel Light (2) + cherry tomatoes</div>
+        <div class="md">2 mini Babybel Light rounds, handful cherry tomatoes — satisfying cheese snack without raw nuts</div>
+        <div class="pills"><span class="pill pp">P:8g</span><span class="pill pf">F:0g</span><span class="pill pt">T:5g</span><span class="pill pc">100 cal</span></div>
+      </td><td class="mt-cal">100</td></tr>
+    </table>
+  </div>
+
+  <!-- DAY 5 · FRIDAY -->
+
+  <div class="day-card">
+    <div class="day-hdr">
+      <div><div class="day-label">Day 5 · Friday</div><div class="day-name">Light & Bright</div></div>
+      <div class="day-right"><div class="day-macros"><span class="dm-pro">P:129g</span><span class="dm-fib">F:23g</span><span class="dm-fat">T:47g</span></div><div class="day-cals">~1,505 cal</div></div>
+    </div>
+    <div class="reuse-bar">♻️ batch hard boiled egg on toast · batch chicken breast for dinner (just reheat)</div>
+    <table class="mt">
+      <tr><td class="mt-time">Breakfast</td><td>
+        <div class="mn">Avocado Toast + Hard Boiled Egg</div>
+        <div class="md">1 slice Dave's Killer Bread, ¼ avocado mashed with lemon, capers & thin red onion, 1 hard boiled egg sliced on top — capers give the briny brightness without smoked fish</div>
+        <div class="pills"><span class="pill pp">P:11g</span><span class="pill pf">F:5g</span><span class="pill pt">T:13g</span><span class="pill pc">340 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1017721-avocado-toast" target="_blank"><span class="nyt">NYT</span>Avocado Toast →</a>
+      </td><td class="mt-cal">340</td></tr>
+      <tr><td class="mt-time">Lunch</td><td>
+        <div class="mn">🌿 Chickpea Stew with Spinach</div>
+        <div class="md">Canned chickpeas in turmeric-garlic broth, wilted spinach, splash of plain Greek yogurt (no coconut milk), slice of Dave's Killer Bread for dipping</div>
+        <div class="pills"><span class="pill pp">P:20g</span><span class="pill pf">F:12g</span><span class="pill pt">T:10g</span><span class="pill pc">420 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1019772-spiced-chickpea-stew-with-coconut-and-turmeric" target="_blank"><span class="nyt">NYT</span>Spiced Chickpea Stew (sub coconut milk with broth + yogurt) →</a>
+      </td><td class="mt-cal">420</td></tr>
+      <tr><td class="mt-time">Snack</td><td>
+        <div class="mn">Cottage Cheese + Pineapple</div>
+        <div class="md">½ cup low-fat cottage cheese, ½ cup fresh pineapple</div>
+        <div class="pills"><span class="pill pp">P:14g</span><span class="pill pf">F:1g</span><span class="pill pt">T:1g</span><span class="pill pc">145 cal</span></div>
+      </td><td class="mt-cal">145</td></tr>
+      <tr><td class="mt-time">Dinner</td><td>
+        <div class="mn">🍗 Italian Chicken Breast + White Bean Salad</div>
+        <div class="md">4 oz batch chicken reheated, warm cannellini beans, cherry tomatoes, arugula, lemon-olive oil — reheat chicken only, everything else is no-cook</div>
+        <div class="pills"><span class="pill pp">P:42g</span><span class="pill pf">F:8g</span><span class="pill pt">T:12g</span><span class="pill pc">470 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1015598-chicken-with-white-beans" target="_blank"><span class="nyt">NYT</span>Chicken with White Beans →</a>
+      </td><td class="mt-cal">470</td></tr>
+      <tr><td class="mt-time">Evening</td><td>
+        <div class="mn">Herbal tea + dark chocolate (2 squares, 70%+)</div>
+        <div class="pills"><span class="pill pp">P:1g</span><span class="pill pf">F:1g</span><span class="pill pt">T:4g</span><span class="pill pc">70 cal</span></div>
+      </td><td class="mt-cal">70</td></tr>
+    </table>
+  </div>
+
+  <!-- DAY 6 · SATURDAY -->
+
+  <div class="day-card">
+    <div class="day-hdr">
+      <div><div class="day-label">Day 6 · Saturday</div><div class="day-name">Weekend Brunch Vibes</div></div>
+      <div class="day-right"><div class="day-macros"><span class="dm-pro">P:125g</span><span class="dm-fib">F:20g</span><span class="dm-fat">T:47g</span></div><div class="day-cals">~1,500 cal</div></div>
+    </div>
+    <div class="reuse-bar">♻️ batch hard boiled eggs for shakshuka · batch brown rice for salmon bowl</div>
+    <table class="mt">
+      <tr><td class="mt-time">Brunch</td><td>
+        <div class="mn">Shakshuka + Hard Boiled Eggs & Feta</div>
+        <div class="md">Spiced tomato-pepper sauce (15 min), 2 batch hard boiled eggs halved on top, crumbled feta, fresh herbs, 1 slice Dave's Killer Bread — just make the sauce</div>
+        <div class="pills"><span class="pill pp">P:22g</span><span class="pill pf">F:5g</span><span class="pill pt">T:16g</span><span class="pill pc">420 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1014721-shakshuka-with-feta" target="_blank"><span class="nyt">NYT</span>Shakshuka with Feta →</a>
+      </td><td class="mt-cal">420</td></tr>
+      <tr><td class="mt-time">Snack</td><td>
+        <div class="mn">Protein Smoothie</div>
+        <div class="md">1 scoop protein powder, 1 cup almond milk, ½ cup frozen berries, ½ banana — blend from Sunday freezer pack</div>
+        <div class="pills"><span class="pill pp">P:24g</span><span class="pill pf">F:3g</span><span class="pill pt">T:3g</span><span class="pill pc">210 cal</span></div>
+      </td><td class="mt-cal">210</td></tr>
+      <tr><td class="mt-time">Dinner</td><td>
+        <div class="mn">🐟 Miso Butter Salmon Bowl</div>
+        <div class="md">4 oz fresh salmon, miso-butter glaze broiled 8 min (no sesame seeds), roasted cabbage & mushrooms, ½ cup batch brown rice</div>
+        <div class="pills"><span class="pill pp">P:34g</span><span class="pill pf">F:6g</span><span class="pill pt">T:16g</span><span class="pill pc">490 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1025677-chan-chan-yaki-miso-butter-salmon" target="_blank"><span class="nyt">NYT</span>Chan Chan Yaki Miso Butter Salmon (skip sesame) →</a>
+      </td><td class="mt-cal">490</td></tr>
+      <tr><td class="mt-time">Evening</td><td>
+        <div class="mn">Greek yogurt parfait — small, with berries + drizzle honey</div>
+        <div class="pills"><span class="pill pp">P:10g</span><span class="pill pf">F:1g</span><span class="pill pt">T:0g</span><span class="pill pc">130 cal</span></div>
+      </td><td class="mt-cal">130</td></tr>
+    </table>
+  </div>
+
+  <!-- DAY 7 · SUNDAY -->
+
+  <div class="day-card">
+    <div class="day-hdr">
+      <div><div class="day-label">Day 7 · Sunday</div><div class="day-name">Meal Prep Day</div></div>
+      <div class="day-right"><div class="day-macros"><span class="dm-pro">P:124g</span><span class="dm-fib">F:28g</span><span class="dm-fat">T:44g</span></div><div class="day-cals">~1,490 cal</div></div>
+    </div>
+    <div class="reuse-bar">🍳 Prep day — cook the week's proteins & grains while eating easy meals from leftovers</div>
+    <table class="mt">
+      <tr><td class="mt-time">Breakfast</td><td>
+        <div class="mn">Greek Yogurt + Berries + Granola</div>
+        <div class="md">¾ cup nonfat Greek yogurt, ½ cup mixed berries, 2 tbsp sesame-free granola, drizzle honey — grab-and-go while batch cooking starts</div>
+        <div class="pills"><span class="pill pp">P:18g</span><span class="pill pf">F:4g</span><span class="pill pt">T:4g</span><span class="pill pc">290 cal</span></div>
+      </td><td class="mt-cal">290</td></tr>
+      <tr><td class="mt-time">Lunch</td><td>
+        <div class="mn">🌿 Lentil Soup — first bowl from the batch</div>
+        <div class="md">2 cups freshly made lentil-vegetable soup — taste test, eat a bowl while hot, store the rest</div>
+        <div class="pills"><span class="pill pp">P:18g</span><span class="pill pf">F:14g</span><span class="pill pt">T:3g</span><span class="pill pc">380 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1019739-lentil-soup-with-lots-of-lemon" target="_blank"><span class="nyt">NYT</span>Lentil Soup with Lots of Lemon →</a>
+      </td><td class="mt-cal">380</td></tr>
+      <tr><td class="mt-time">Snack</td><td>
+        <div class="mn">Apple + almond butter</div>
+        <div class="pills"><span class="pill pp">P:4g</span><span class="pill pf">F:5g</span><span class="pill pt">T:9g</span><span class="pill pc">200 cal</span></div>
+      </td><td class="mt-cal">200</td></tr>
+      <tr><td class="mt-time">Dinner</td><td>
+        <div class="mn">🍗 Sheet Pan Chicken Breast + Roasted Veg</div>
+        <div class="md">Eat one portion of the batch chicken + one portion of batch roasted veg tonight — the rest goes in the fridge for Tue & Fri</div>
+        <div class="pills"><span class="pill pp">P:36g</span><span class="pill pf">F:6g</span><span class="pill pt">T:9g</span><span class="pill pc">470 cal</span></div>
+        <a class="ml-link" href="https://cooking.nytimes.com/recipes/1018889-sheet-pan-chicken-thighs-with-roasted-vegetables" target="_blank"><span class="nyt">NYT</span>Sheet Pan Chicken + Veg (use breast) →</a>
+      </td><td class="mt-cal">470</td></tr>
+      <tr><td class="mt-time">Evening</td><td>
+        <div class="mn">½ cup cottage cheese + cherry tomatoes</div>
+        <div class="pills"><span class="pill pp">P:14g</span><span class="pill pf">F:1g</span><span class="pill pt">T:1g</span><span class="pill pc">130 cal</span></div>
+      </td><td class="mt-cal">130</td></tr>
+    </table>
+  </div>
+
+  <div class="prep-block">
+    <h3>🍳 Sunday Batch Cook — ~90 minutes</h3>
+    <div class="prep-grid">
+      <div class="prep-item-box"><div class="pib-title">🍗 Chicken Breast (1.5 lbs)</div><div class="pib-desc">Sheet pan, lemon-garlic-olive oil, 400°F 22 min · feeds Tue lunch, Fri dinner, Sun dinner</div></div>
+      <div class="prep-item-box"><div class="pib-title">🥚 Hard Boiled Eggs (8–10)</div><div class="pib-desc">Boil 12 min, ice bath, peel & store · used Mon, Wed, Thu, Fri, Sat all week</div></div>
+      <div class="prep-item-box"><div class="pib-title">🍚 Brown Rice (3 cups dry)</div><div class="pib-desc">Big pot → Mon dinner, Tue lunch, Sat dinner · portion ½-cup servings</div></div>
+      <div class="prep-item-box"><div class="pib-title">🌿 Lentil Soup (big pot)</div><div class="pib-desc">6–8 cups · Mon lunch base, Thu lunch, Sun lunch · freeze half for next week</div></div>
+      <div class="prep-item-box"><div class="pib-title">🥦 Sheet Pan Veg</div><div class="pib-desc">Zucchini, bell pepper, broccoli, sweet potato · roasts alongside chicken · used all week</div></div>
+      <div class="prep-item-box"><div class="pib-title">🧴 Lemon-Olive Oil Dressing</div><div class="pib-desc">3 tbsp OO + 2 tbsp lemon + 1 tsp Dijon + garlic · jar in fridge · replaces all vinegar-based dressings</div></div>
+    </div>
+    <div style="margin-top:14px;font-size:12px;opacity:.75;">🦐 Shrimp stays frozen all week — cooks in 5 min on Wed & Thu. No advance prep needed.</div>
+  </div>
+</div><!-- /panel-meals -->
+
+<!-- ══════════════════════════════════════
+     TAB 2 · SHOPPING LIST
+══════════════════════════════════════ -->
+
+<div class="panel" id="panel-shop">
+  <div class="sec-title">Weekly Shopping List</div>
+  <div class="sec-sub">Streamlined to avoid duplicates — every item is used in multiple meals. Tap to check off as you shop.</div>
+
+  <div class="shop-meta">
+    <div class="shop-badge">🍞 One bread: Dave's White Done Right</div>
+    <div class="shop-badge">🍝 One pasta: Orzo only</div>
+    <div class="shop-badge">🚫 Sesame-free · Coconut-free</div>
+    <div class="shop-badge">🌿 Hummus = make it (recipe below)</div>
+  </div>
+
+  <div class="hummus-card">
+    <h4>🌿 Make Martha Stewart's Tahini-Free Hummus Instead of Buying It</h4>
+    <p>All ingredients are already on your shopping list (chickpeas, lemon, garlic, olive oil, cumin). <a href="https://www.marthastewart.com/334974/hummus-without-tahini" target="_blank">Martha Stewart Hummus (no tahini) →</a> — blend 1 can chickpeas + 3 tbsp olive oil + 2 tbsp lemon juice + 1 garlic clove + ½ tsp cumin + salt. Stores 5 days in the fridge. No separate hummus purchase needed.</p>
+  </div>
+
+  <div class="shop-grid">
+
+```
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🥦</div><div class="cat-name">Produce</div><div class="cat-count">17 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Avocados</div><div class="si-qty">3–4</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Mixed berries (fresh or frozen)</div><div class="si-qty">2 cups</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Strawberries (for overnight oats)</div><div class="si-qty">1 pint</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Bananas (for smoothies)</div><div class="si-qty">3</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Apples</div><div class="si-qty">3 medium</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Pineapple (fresh or canned in juice)</div><div class="si-qty">1 cup</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Baby spinach (scramble, smoothies, stew)</div><div class="si-qty">1 large bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Arugula / mixed greens (Niçoise + avocado toast)</div><div class="si-qty">1 large bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Broccoli (roast Sunday, use Tue & Wed)</div><div class="si-qty">2 heads</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Bell peppers — red & yellow (snacks, roasting, shakshuka)</div><div class="si-qty">5 total</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Cherry tomatoes (Niçoise, shakshuka, pasta, white bean salad)</div><div class="si-qty">2 pints</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Zucchini (Sunday roast)</div><div class="si-qty">2</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Asparagus (Mon dinner)</div><div class="si-qty">1 bunch</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Sweet potato (Sunday roast)</div><div class="si-qty">2 medium</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Celery + baby carrots (snacks + lentil soup)</div><div class="si-qty">1 bag each</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Cucumber (Mon evening, Niçoise)</div><div class="si-qty">1</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Snap peas (Tue Asian bowl)</div><div class="si-qty">1 bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Lemons — used in everything all week</div><div class="si-qty">6–8</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Garlic bulb</div><div class="si-qty">1 large</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Fresh ginger root</div><div class="si-qty">1 knob</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Red onion (avocado toast, shakshuka, Niçoise)</div><div class="si-qty">2</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Fresh basil + flat-leaf parsley (pasta + Asian dishes)</div><div class="si-qty">1 bunch each</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Mushrooms + ½ head cabbage (Sat salmon bowl)</div><div class="si-qty">1 pack + ½ head</div></div>
+  </div>
+</div>
+
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🐟</div><div class="cat-name">Protein</div><div class="cat-count">8 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Chicken breast, boneless skinless</div><div class="si-qty">1.5 lbs</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Salmon fillets (fresh or frozen)</div><div class="si-qty">8 oz (2×4 oz)</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Shrimp, peeled & deveined (frozen) — stays frozen until Wed/Thu</div><div class="si-qty">1 lb bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Canned tuna in water</div><div class="si-qty">2 cans (5 oz)</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Eggs, large — 8–10 hard boiled + cooking eggs</div><div class="si-qty">18 ct</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Nonfat / low-fat Greek yogurt</div><div class="si-qty">32 oz container</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Low-fat cottage cheese</div><div class="si-qty">16 oz</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Vanilla protein powder (sesame-free — check label)</div><div class="si-qty">check servings</div></div>
+  </div>
+</div>
+
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🧀</div><div class="cat-name">Dairy & Cheese</div><div class="cat-count">6 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Unsweetened almond milk</div><div class="si-qty">2 cartons (64 oz)</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Feta cheese, crumbled (lentil bowl, shakshuka)</div><div class="si-qty">4 oz</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Parmesan, grated (pasta Wed & Thu, chicken Fri)</div><div class="si-qty">4 oz</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Mini Babybel Light (Thu evening snack)</div><div class="si-qty">1 pack (6 ct)</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Unsalted butter (miso salmon glaze)</div><div class="si-qty">1 stick</div></div>
+  </div>
+</div>
+
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🌾</div><div class="cat-name">Bread, Grains & Carbs</div><div class="cat-count">7 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Dave's Killer Bread — White Done Right (only bread needed all week)</div><div class="si-qty">1 loaf</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Rolled oats (overnight oats Wed)</div><div class="si-qty">1 canister</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Brown rice (Mon dinner, Tue lunch, Sat dinner)</div><div class="si-qty">2 lb bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Quinoa (Mon lentil bowl)</div><div class="si-qty">1 lb bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Orzo — used for both shrimp pasta Wed AND scampi Thu</div><div class="si-qty">12 oz box</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Plain rice cakes (Tue snack, sesame-free)</div><div class="si-qty">1 bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Granola (sesame-free — check label)</div><div class="si-qty">1 small bag</div></div>
+  </div>
+</div>
+
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🥫</div><div class="cat-name">Canned Goods & Legumes</div><div class="cat-count">7 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Canned chickpeas (Tue dinner, Thu hummus, Fri stew)</div><div class="si-qty">3 cans (15 oz)</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Canned cannellini (white) beans (Fri dinner)</div><div class="si-qty">1 can (15 oz)</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Dried lentils, green or brown (big Sunday pot)</div><div class="si-qty">1 lb bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Canned diced tomatoes (shakshuka Sat, shrimp pasta Wed)</div><div class="si-qty">2 cans (14 oz)</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Frozen shelled edamame (Tue snack)</div><div class="si-qty">16 oz bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Low-sodium vegetable broth (lentil soup, chickpea stew)</div><div class="si-qty">32 oz carton</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Olives + capers (Niçoise, avocado toast)</div><div class="si-qty">1 small jar each</div></div>
+  </div>
+</div>
+
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🧴</div><div class="cat-name">Fats, Seeds & Spreads</div><div class="cat-count">4 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Extra virgin olive oil — used in literally everything</div><div class="si-qty">1 bottle</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Almond butter (Mon & Sun snack, granola bowls)</div><div class="si-qty">1 jar</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Ground flaxseed (overnight oats)</div><div class="si-qty">small bag</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Dark chocolate 70%+ (Wed & Fri evening)</div><div class="si-qty">1 bar</div></div>
+  </div>
+</div>
+
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🫙</div><div class="cat-name">Sauces & Condiments</div><div class="cat-count">7 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">White miso paste (Tue dinner glaze, Sat salmon)</div><div class="si-qty">small tub</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Low-sodium soy sauce or tamari</div><div class="si-qty">1 bottle</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Red wine vinegar (Niçoise dressing)</div><div class="si-qty">1 bottle</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Dry white wine or broth (scampi Thu)</div><div class="si-qty">1 small bottle</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Dijon mustard (lemon-olive oil dressing)</div><div class="si-qty">1 jar</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Honey (yogurt bowls, oats, dressings)</div><div class="si-qty">small jar</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Brown sugar (Mon salmon glaze)</div><div class="si-qty">small box</div></div>
+  </div>
+</div>
+
+<div class="shop-cat">
+  <div class="shop-cat-hdr"><div class="cat-icon">🌶️</div><div class="cat-name">Spices & Pantry</div><div class="cat-count">9 items</div></div>
+  <div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Kosher salt + black pepper</div><div class="si-qty">—</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Red pepper flakes (pasta, avocado toast, lentils)</div><div class="si-qty">—</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Ground turmeric (chickpea stew, lentil soup)</div><div class="si-qty">—</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Ground cumin (hummus + lentil soup)</div><div class="si-qty">—</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Smoked paprika (shakshuka, lentil soup)</div><div class="si-qty">—</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Dried Italian seasoning (chicken, white bean salad)</div><div class="si-qty">—</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Ground cinnamon (yogurt bowls, matcha)</div><div class="si-qty">—</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Ceremonial matcha powder</div><div class="si-qty">1 tin</div></div>
+    <div class="shop-item" onclick="tog(this)"><div class="si-cb"><span class="si-ck">✓</span></div><div class="si-label">Herbal tea (Wed & Fri evenings)</div><div class="si-qty">1 box</div></div>
+  </div>
+</div>
+```
+
+  </div>
+  <button class="clear-btn" onclick="clearShop()">↺ Uncheck all</button>
+</div><!-- /panel-shop -->
+
+<!-- ══════════════════════════════════════
+     TAB 3 · PREP LIST
+══════════════════════════════════════ -->
+
+<div class="panel" id="panel-prep">
+  <div class="sec-title">Weekly Prep List</div>
+  <div class="sec-sub">~90 minutes Sunday runs in parallel — everything finishes together. Tap tasks to mark done.</div>
+
+  <div class="prep-intro">
+    <h3>🧠 The 90-Minute Sunday Parallel Cook</h3>
+    <p>Chicken & veg go in the oven → while they cook: hard boil eggs + start rice + start lentil soup on the stove + make dressings + make hummus (5 min blending). By the time the oven timer goes off, almost everything is done. One active cooking session sets up the whole week.</p>
+  </div>
+
+  <div class="prep-section">
+    <div class="prep-sec-title ps-sun"><span>🍳</span> Sunday Batch Cook — All in parallel, ~90 min</div>
+    <div class="prep-items-wrap">
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Hard boil 8–10 eggs</div><div class="pr-note">Cold water start, bring to boil, 12 min, ice bath · peel all & store in airtight container or bowl of cold water · lasts 5 days</div></div><div class="pr-time">15 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Cook big pot of brown rice (3 cups dry)</div><div class="pr-note">Stovetop or rice cooker · yields ~6 cups · Mon dinner, Tue lunch, Sat dinner · portion ½-cup containers</div></div><div class="pr-time">45 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Cook quinoa (1.5 cups dry)</div><div class="pr-note">For Mon lunch lentil bowl only · 15 min simmer · store in one container</div></div><div class="pr-time">18 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Make big pot of lentil soup</div><div class="pr-note">NYT Lentil Soup with Lots of Lemon · yields 6–8 cups · Mon lunch, Thu lunch, Sun lunch · freeze half for next week</div></div><div class="pr-time">40 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Roast sheet pan of vegetables + batch chicken breast</div><div class="pr-note">Same oven, same time: 400°F · veg (zucchini, bell pepper, broccoli, sweet potato) on one pan · 1.5 lbs chicken on another · 22–25 min · eat chicken tonight, refrigerate rest</div></div><div class="pr-time">25 min active + 25 in oven</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Blend Martha Stewart hummus</div><div class="pr-note">1 can chickpeas (drained) + 3 tbsp olive oil + 2 tbsp lemon juice + 1 garlic clove + ½ tsp cumin + salt · blend until smooth · jar in fridge · used Thu snack · <a href="https://www.marthastewart.com/334974/hummus-without-tahini" target="_blank" style="color:var(--lav);">Recipe →</a></div></div><div class="pr-time">5 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Make lemon-olive oil dressing (jar)</div><div class="pr-note">3 tbsp olive oil + 2 tbsp lemon juice + 1 tsp Dijon + 1 garlic clove minced + pinch salt · shake in jar · replaces all vinegar dressings all week except Niçoise (use red wine vinegar for that)</div></div><div class="pr-time">4 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Make soy-ginger sauce (small jar)</div><div class="pr-note">3 tbsp soy sauce + 1 tsp grated ginger + 2 garlic cloves minced + 1 tbsp lemon juice + 1 tsp olive oil · used Tue Asian chicken bowl</div></div><div class="pr-time">4 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Freeze 2 smoothie packs (Wed & Sat)</div><div class="pr-note">2 zip bags, each with ½ banana + ½ cup berries + handful spinach · freeze flat · Wed & Sat: just add 1 cup almond milk + 1 scoop protein powder and blend</div></div><div class="pr-time">6 min</div></div>
+    </div>
+  </div>
+
+  <div class="prep-section">
+    <div class="prep-sec-title ps-weekly"><span>🥗</span> Weekly Prep — Wash, Chop & Portion</div>
+    <div class="prep-items-wrap">
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Wash and spin-dry all leafy greens</div><div class="pr-note">Arugula & mixed greens · store in container with paper towel to absorb moisture · used for both salads and avocado toast toppings all week</div></div><div class="pr-time">8 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Pre-cut snack vegetables</div><div class="pr-note">Celery sticks + bell pepper strips + baby carrots · store in containers of cold water in fridge · Thu snack hummus plate + any time grab-and-go</div></div><div class="pr-time">8 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Portion cooked proteins & grains into labeled containers</div><div class="pr-note">Chicken: 3 containers ~4 oz each · Brown rice: 4–5 containers ½ cup each · Quinoa: 2 containers · Lentil soup: portion for Mon, Thu, then freeze the rest</div></div><div class="pr-time">8 min</div></div>
+    </div>
+  </div>
+
+  <div class="prep-section">
+    <div class="prep-sec-title ps-daily"><span>⏰</span> Midweek Quick Tasks</div>
+    <div class="prep-items-wrap">
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Tuesday night: prep overnight oats for Wednesday</div><div class="pr-note">Mix ½ cup oats + ¾ cup almond milk + 1 tbsp flaxseed + 1 tbsp honey in a jar · refrigerate · add strawberries Wednesday morning</div></div><div class="pr-time">5 min Tue PM</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Wed & Thu: shrimp cooks straight from frozen — no thaw needed</div><div class="pr-note">Just run under cold water for 2 min or cook from frozen in 6–7 min · truly zero prep</div></div><div class="pr-time">0 min</div></div>
+      <div class="prep-row" onclick="togP(this)"><div class="pr-cb"></div><div class="pr-body"><div class="pr-label">Every morning: fill 2.5L water bottle</div><div class="pr-note">Do this before matcha · add lemon slices if desired · refill a 32 oz bottle 2–3× through the day</div></div><div class="pr-time">1 min</div></div>
+    </div>
+  </div>
+
+  <div style="background:white;border:1px solid var(--border);border-radius:13px;padding:18px 20px;margin-top:4px;">
+    <div style="font-family:'Lora',serif;font-size:15px;font-weight:700;color:var(--olive);margin-bottom:12px;">📦 Storage Guide</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:12px;font-size:12px;">
+      <div><strong>Batch chicken breast</strong><br><span style="color:var(--muted)">4 days fridge · reheat in pan with splash of water</span></div>
+      <div><strong>Hard boiled eggs (peeled)</strong><br><span style="color:var(--muted)">5 days in bowl of cold water, fridge</span></div>
+      <div><strong>Cooked grains</strong><br><span style="color:var(--muted)">5 days fridge · 3 months frozen</span></div>
+      <div><strong>Roasted vegetables</strong><br><span style="color:var(--muted)">4–5 days fridge · 90 sec microwave</span></div>
+      <div><strong>Lentil soup</strong><br><span style="color:var(--muted)">5 days fridge · freeze half immediately</span></div>
+      <div><strong>Homemade hummus</strong><br><span style="color:var(--muted)">5 days fridge in sealed jar</span></div>
+      <div><strong>Lemon-olive oil dressing</strong><br><span style="color:var(--muted)">1 week fridge · shake before using</span></div>
+      <div><strong>Smoothie freezer packs</strong><br><span style="color:var(--muted)">3 months frozen · blend from frozen</span></div>
+      <div><strong>Dave's Killer Bread</strong><br><span style="color:var(--muted)">Freeze half the loaf if not using quickly</span></div>
+    </div>
+  </div>
+</div><!-- /panel-prep -->
+
+<!-- ══════════════════════════════════════
+     TAB 4 · DAILY SCHEDULE
+══════════════════════════════════════ -->
+
+<div class="panel" id="panel-sched">
+  <div class="sec-title">Daily Schedule</div>
+  <div class="sec-sub">Meals + workouts combined. Tap any item to mark done. Select a day.</div>
+
+  <div class="day-tabs">
+    <button class="day-tab active" onclick="switchDay('mon',this)">Mon</button>
+    <button class="day-tab" onclick="switchDay('tue',this)">Tue</button>
+    <button class="day-tab" onclick="switchDay('wed',this)">Wed</button>
+    <button class="day-tab" onclick="switchDay('thu',this)">Thu</button>
+    <button class="day-tab" onclick="switchDay('fri',this)">Fri</button>
+    <button class="day-tab" onclick="switchDay('sat',this)">Sat</button>
+    <button class="day-tab rest" onclick="switchDay('sun',this)">Sun</button>
+  </div>
+
+  <!-- MONDAY -->
+
+  <div class="day-panel active" id="dp-mon">
+    <div class="dhc dhc-str">
+      <div class="dhc-left"><h2>Monday — Strength A</h2><p>Strength Day Fuel · Full Body Strength A</p></div>
+      <div class="dhc-badges"><div class="dhc-badge">~1,500 cal</div><div class="dhc-badge">P:128g</div><div class="dhc-badge">F:27g</div><div class="dhc-badge">💪 45–55 min</div></div>
+    </div>
+    <div class="sched-list">
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 AM</div><div class="si-icon ic-water">💧</div><div class="si-body"><div class="si-title">Drink 500 ml water immediately</div><div class="si-detail">Before matcha, before anything else</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:40 AM</div><div class="si-icon ic-ritual">🍵</div><div class="si-body"><div class="si-title">Matcha Almond Latte</div><div class="si-detail">1 tsp matcha + 8 oz steamed almond milk</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:0g</span><span class="sm-t">T:2g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:00 AM</div><div class="si-icon ic-meal">🥑</div><div class="si-body"><div class="si-title">Breakfast — Avocado Toast + Hard Boiled Egg</div><div class="si-detail">Dave's Killer Bread, ¼ avocado mashed, 1 hard boiled egg sliced on top, red pepper flakes, arugula</div><div class="si-macros"><span class="sm-p">P:11g</span><span class="sm-f">F:5g</span><span class="sm-t">T:13g</span><span style="color:var(--muted)">330 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">12:00 PM</div><div class="si-icon ic-meal">🥗</div><div class="si-body"><div class="si-title">Lunch — Lentil & Quinoa Bowl</div><div class="si-detail">½ cup batch lentils, ½ cup quinoa, Sunday's roasted veg, lemon-olive oil dressing, feta</div><div class="si-macros"><span class="sm-p">P:22g</span><span class="sm-f">F:10g</span><span class="sm-t">T:10g</span><span style="color:var(--muted)">420 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">3:30 PM</div><div class="si-icon ic-meal">🍎</div><div class="si-body"><div class="si-title">Snack — Apple + Almond Butter</div><div class="si-macros"><span class="sm-p">P:4g</span><span class="sm-f">F:5g</span><span class="sm-t">T:9g</span><span style="color:var(--muted)">200 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">5:00 PM</div><div class="si-icon ic-wk">🏋️</div><div class="si-body"><div class="si-title">WORKOUT — Full Body Strength A (45–55 min)</div><div class="si-detail">Goblet squat · RDL · Chest press · DB Row · Lateral raises · Plank · Dead bug</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 PM</div><div class="si-icon ic-meal">🐟</div><div class="si-body"><div class="si-title">Dinner — Italian Herb Salmon + Asparagus & Rice</div><div class="si-detail">4 oz salmon (cook fresh 12 min), asparagus, ½ cup batch brown rice</div><div class="si-macros"><span class="sm-p">P:32g</span><span class="sm-f">F:5g</span><span class="sm-t">T:12g</span><span style="color:var(--muted)">480 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 PM</div><div class="si-icon ic-meal">🌙</div><div class="si-body"><div class="si-title">Evening — Cottage Cheese + Cucumber</div><div class="si-macros"><span class="sm-p">P:14g</span><span class="sm-f">F:0g</span><span class="sm-t">T:1g</span><span style="color:var(--muted)">75 cal</span></div></div><div class="si-cb2"></div></div>
+    </div>
+    <div class="day-total">
+      <div class="dt-item"><span class="dt-val">1,575</span><span class="dt-label">Total cal</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--pro)">128g</span><span class="dt-label">Protein</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fib)">27g</span><span class="dt-label">Fiber</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fat)">46g</span><span class="dt-label">Fat</span></div>
+    </div>
+  </div>
+
+  <!-- TUESDAY -->
+
+  <div class="day-panel" id="dp-tue">
+    <div class="dhc dhc-hit">
+      <div class="dhc-left"><h2>Tuesday — HIIT</h2><p>Asian-Inspired Day · High Intensity Intervals</p></div>
+      <div class="dhc-badges"><div class="dhc-badge">~1,495 cal</div><div class="dhc-badge">P:131g</div><div class="dhc-badge">F:26g</div><div class="dhc-badge">🔥 30–35 min</div></div>
+    </div>
+    <div class="sched-list">
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 AM</div><div class="si-icon ic-water">💧</div><div class="si-body"><div class="si-title">Drink 500 ml water on waking</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:40 AM</div><div class="si-icon ic-ritual">🍵</div><div class="si-body"><div class="si-title">Matcha Almond Latte</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:0g</span><span class="sm-t">T:2g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:00 AM</div><div class="si-icon ic-meal">🍳</div><div class="si-body"><div class="si-title">Breakfast — Greek Yogurt Granola Bowl</div><div class="si-detail">¾ cup Greek yogurt, ½ cup berries, granola, honey</div><div class="si-macros"><span class="sm-p">P:18g</span><span class="sm-f">F:4g</span><span class="sm-t">T:7g</span><span style="color:var(--muted)">330 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:45 AM</div><div class="si-icon ic-wk">🔥</div><div class="si-body"><div class="si-title">WORKOUT — HIIT Cardio (30–35 min)</div><div class="si-detail">5 min warm-up · 10 rounds: 20 sec sprint / 40 sec walk · 10 min cool-down + stretch</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">12:00 PM</div><div class="si-icon ic-meal">🥗</div><div class="si-body"><div class="si-title">Lunch — Asian Chicken Bowl</div><div class="si-detail">Batch chicken sliced, batch brown rice, reheated broccoli & snap peas, soy-ginger sauce</div><div class="si-macros"><span class="sm-p">P:36g</span><span class="sm-f">F:7g</span><span class="sm-t">T:8g</span><span style="color:var(--muted)">440 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">3:30 PM</div><div class="si-icon ic-meal">🫛</div><div class="si-body"><div class="si-title">Snack — Edamame + Rice Cakes</div><div class="si-macros"><span class="sm-p">P:10g</span><span class="sm-f">F:4g</span><span class="sm-t">T:3g</span><span style="color:var(--muted)">190 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 PM</div><div class="si-icon ic-meal">🍽️</div><div class="si-body"><div class="si-title">Dinner — Miso Chickpea & Broccoli Bowl</div><div class="si-detail">Chickpeas in miso-garlic glaze, reheated broccoli, ½ cup batch brown rice</div><div class="si-macros"><span class="sm-p">P:20g</span><span class="sm-f">F:9g</span><span class="sm-t">T:11g</span><span style="color:var(--muted)">445 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 PM</div><div class="si-icon ic-meal">🌙</div><div class="si-body"><div class="si-title">Evening — Greek Yogurt + Cinnamon + Honey</div><div class="si-macros"><span class="sm-p">P:17g</span><span class="sm-f">F:0g</span><span class="sm-t">T:0g</span><span style="color:var(--muted)">90 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">9:00 PM</div><div class="si-icon ic-rest">📝</div><div class="si-body"><div class="si-title">Prep overnight oats for Wednesday morning</div><div class="si-detail">Mix ½ cup oats + ¾ cup almond milk + 1 tbsp flaxseed + 1 tbsp honey in jar · refrigerate · add strawberries in morning</div></div><div class="si-cb2"></div></div>
+    </div>
+    <div class="day-total">
+      <div class="dt-item"><span class="dt-val">1,565</span><span class="dt-label">Total cal</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--pro)">131g</span><span class="dt-label">Protein</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fib)">26g</span><span class="dt-label">Fiber</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fat)">44g</span><span class="dt-label">Fat</span></div>
+    </div>
+  </div>
+
+  <!-- WEDNESDAY -->
+
+  <div class="day-panel" id="dp-wed">
+    <div class="dhc dhc-str">
+      <div class="dhc-left"><h2>Wednesday — Strength B</h2><p>Italian Night · Full Body Strength B</p></div>
+      <div class="dhc-badges"><div class="dhc-badge">~1,500 cal</div><div class="dhc-badge">P:122g</div><div class="dhc-badge">F:24g</div><div class="dhc-badge">💪 45–55 min</div></div>
+    </div>
+    <div class="sched-list">
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 AM</div><div class="si-icon ic-water">💧</div><div class="si-body"><div class="si-title">Drink 500 ml water on waking</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:40 AM</div><div class="si-icon ic-ritual">🍵</div><div class="si-body"><div class="si-title">Matcha Almond Latte</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:0g</span><span class="sm-t">T:2g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:00 AM</div><div class="si-icon ic-meal">🥣</div><div class="si-body"><div class="si-title">Breakfast — Overnight Oats</div><div class="si-detail">Grab from fridge, add ½ cup strawberries</div><div class="si-macros"><span class="sm-p">P:8g</span><span class="sm-f">F:7g</span><span class="sm-t">T:6g</span><span style="color:var(--muted)">350 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">12:00 PM</div><div class="si-icon ic-meal">🥗</div><div class="si-body"><div class="si-title">Lunch — Tuna Niçoise Salad</div><div class="si-detail">4 oz tuna, arugula & greens, cherry tomatoes, cucumber, 1 hard boiled egg, olives, red wine vinaigrette</div><div class="si-macros"><span class="sm-p">P:38g</span><span class="sm-f">F:4g</span><span class="sm-t">T:14g</span><span style="color:var(--muted)">390 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">3:30 PM</div><div class="si-icon ic-meal">🥤</div><div class="si-body"><div class="si-title">Snack — Protein Smoothie</div><div class="si-detail">Blend Sunday freezer pack + 1 cup almond milk + 1 scoop protein powder</div><div class="si-macros"><span class="sm-p">P:24g</span><span class="sm-f">F:2g</span><span class="sm-t">T:3g</span><span style="color:var(--muted)">200 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">5:00 PM</div><div class="si-icon ic-wk">💪</div><div class="si-body"><div class="si-title">WORKOUT — Full Body Strength B (45–55 min)</div><div class="si-detail">Bulgarian split squat · Hip thrust · Shoulder press · Lat pulldown · Triceps · Bicycle crunches · Side plank</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 PM</div><div class="si-icon ic-meal">🍝</div><div class="si-body"><div class="si-title">Dinner — Shrimp & Tomato Orzo</div><div class="si-detail">4 oz shrimp (5 min), orzo, canned tomatoes, garlic, olive oil, basil, Parmesan</div><div class="si-macros"><span class="sm-p">P:32g</span><span class="sm-f">F:4g</span><span class="sm-t">T:11g</span><span style="color:var(--muted)">490 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 PM</div><div class="si-icon ic-meal">🌙</div><div class="si-body"><div class="si-title">Evening — Dark Chocolate + Herbal Tea</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:1g</span><span class="sm-t">T:4g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+    </div>
+    <div class="day-total">
+      <div class="dt-item"><span class="dt-val">1,570</span><span class="dt-label">Total cal</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--pro)">122g</span><span class="dt-label">Protein</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fib)">24g</span><span class="dt-label">Fiber</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fat)">47g</span><span class="dt-label">Fat</span></div>
+    </div>
+  </div>
+
+  <!-- THURSDAY -->
+
+  <div class="day-panel" id="dp-thu">
+    <div class="dhc dhc-rec">
+      <div class="dhc-left"><h2>Thursday — Recovery</h2><p>Veggie Power Day · Yoga & Foam Rolling</p></div>
+      <div class="dhc-badges"><div class="dhc-badge">~1,490 cal</div><div class="dhc-badge">P:118g</div><div class="dhc-badge">F:30g</div><div class="dhc-badge">🧘 30–40 min</div></div>
+    </div>
+    <div class="sched-list">
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 AM</div><div class="si-icon ic-water">💧</div><div class="si-body"><div class="si-title">Drink 500 ml water on waking</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:40 AM</div><div class="si-icon ic-ritual">🍵</div><div class="si-body"><div class="si-title">Matcha Almond Latte</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:0g</span><span class="sm-t">T:2g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:00 AM</div><div class="si-icon ic-wk">🧘</div><div class="si-body"><div class="si-title">WORKOUT — Yoga / Active Recovery (30–40 min)</div><div class="si-detail">20–25 min yoga flow · 10 min foam rolling quads, IT band, hamstrings · optional 20 min brisk walk</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:00 AM</div><div class="si-icon ic-meal">🍳</div><div class="si-body"><div class="si-title">Breakfast — Veggie Scramble + Toast</div><div class="si-detail">2 eggs + 2 whites, reheated Sunday roasted veg, Dave's Killer Bread, thin avocado</div><div class="si-macros"><span class="sm-p">P:22g</span><span class="sm-f">F:4g</span><span class="sm-t">T:12g</span><span style="color:var(--muted)">335 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">12:00 PM</div><div class="si-icon ic-meal">🥗</div><div class="si-body"><div class="si-title">Lunch — Lentil Soup + Hard Boiled Egg</div><div class="si-detail">2 cups batch lentil soup reheated, 1 hard boiled egg halved on top, baby carrots</div><div class="si-macros"><span class="sm-p">P:24g</span><span class="sm-f">F:15g</span><span class="sm-t">T:4g</span><span style="color:var(--muted)">380 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">3:30 PM</div><div class="si-icon ic-meal">🥕</div><div class="si-body"><div class="si-title">Snack — Martha Stewart Hummus + Veggies</div><div class="si-detail">3 tbsp homemade hummus, pre-cut celery, bell pepper, baby carrots (all prepped Sunday)</div><div class="si-macros"><span class="sm-p">P:4g</span><span class="sm-f">F:4g</span><span class="sm-t">T:5g</span><span style="color:var(--muted)">155 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 PM</div><div class="si-icon ic-meal">🍽️</div><div class="si-body"><div class="si-title">Dinner — Shrimp Scampi with Orzo</div><div class="si-detail">4 oz shrimp (5 min), orzo, white wine, garlic, lemon, parsley, Parmesan</div><div class="si-macros"><span class="sm-p">P:30g</span><span class="sm-f">F:2g</span><span class="sm-t">T:11g</span><span style="color:var(--muted)">430 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 PM</div><div class="si-icon ic-meal">🌙</div><div class="si-body"><div class="si-title">Evening — 2 Mini Babybel Light + Cherry Tomatoes</div><div class="si-detail">Satisfying real cheese without the raw nuts</div><div class="si-macros"><span class="sm-p">P:8g</span><span class="sm-f">F:0g</span><span class="sm-t">T:5g</span><span style="color:var(--muted)">100 cal</span></div></div><div class="si-cb2"></div></div>
+    </div>
+    <div class="day-total">
+      <div class="dt-item"><span class="dt-val">1,560</span><span class="dt-label">Total cal</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--pro)">118g</span><span class="dt-label">Protein</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fib)">30g</span><span class="dt-label">Fiber</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fat)">43g</span><span class="dt-label">Fat</span></div>
+    </div>
+  </div>
+
+  <!-- FRIDAY -->
+
+  <div class="day-panel" id="dp-fri">
+    <div class="dhc dhc-str">
+      <div class="dhc-left"><h2>Friday — Strength C</h2><p>Light & Bright · Full Body Strength C</p></div>
+      <div class="dhc-badges"><div class="dhc-badge">~1,505 cal</div><div class="dhc-badge">P:129g</div><div class="dhc-badge">F:23g</div><div class="dhc-badge">🏆 45–55 min</div></div>
+    </div>
+    <div class="sched-list">
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 AM</div><div class="si-icon ic-water">💧</div><div class="si-body"><div class="si-title">Drink 500 ml water on waking</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:40 AM</div><div class="si-icon ic-ritual">🍵</div><div class="si-body"><div class="si-title">Matcha Almond Latte</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:0g</span><span class="sm-t">T:2g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:00 AM</div><div class="si-icon ic-meal">🥑</div><div class="si-body"><div class="si-title">Breakfast — Avocado Toast + Hard Boiled Egg</div><div class="si-detail">Dave's Killer Bread, ¼ avocado mashed with lemon, capers & thin red onion, 1 hard boiled egg sliced on top — briny & bright, no smoked fish needed</div><div class="si-macros"><span class="sm-p">P:11g</span><span class="sm-f">F:5g</span><span class="sm-t">T:13g</span><span style="color:var(--muted)">340 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">12:00 PM</div><div class="si-icon ic-meal">🫘</div><div class="si-body"><div class="si-title">Lunch — Chickpea Stew with Spinach</div><div class="si-detail">Chickpeas in turmeric-garlic broth, wilted spinach, Greek yogurt instead of coconut milk, Dave's bread for dipping</div><div class="si-macros"><span class="sm-p">P:20g</span><span class="sm-f">F:12g</span><span class="sm-t">T:10g</span><span style="color:var(--muted)">420 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">3:30 PM</div><div class="si-icon ic-meal">🍍</div><div class="si-body"><div class="si-title">Snack — Cottage Cheese + Pineapple</div><div class="si-macros"><span class="sm-p">P:14g</span><span class="sm-f">F:1g</span><span class="sm-t">T:1g</span><span style="color:var(--muted)">145 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">5:00 PM</div><div class="si-icon ic-wk">🏆</div><div class="si-body"><div class="si-title">WORKOUT — Full Body Strength C (45–55 min)</div><div class="si-detail">Sumo deadlift · Walking lunges · Chest fly · Reverse lunge twist · Incline DB row · Leg raises</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 PM</div><div class="si-icon ic-meal">🍗</div><div class="si-body"><div class="si-title">Dinner — Italian Chicken Breast + White Bean Salad</div><div class="si-detail">Batch chicken reheated, warm cannellini beans, cherry tomatoes, arugula, lemon-olive oil</div><div class="si-macros"><span class="sm-p">P:42g</span><span class="sm-f">F:8g</span><span class="sm-t">T:12g</span><span style="color:var(--muted)">470 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 PM</div><div class="si-icon ic-meal">🌙</div><div class="si-body"><div class="si-title">Evening — Herbal Tea + Dark Chocolate (2 squares)</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:1g</span><span class="sm-t">T:4g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+    </div>
+    <div class="day-total">
+      <div class="dt-item"><span class="dt-val">1,535</span><span class="dt-label">Total cal</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--pro)">129g</span><span class="dt-label">Protein</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fib)">23g</span><span class="dt-label">Fiber</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fat)">47g</span><span class="dt-label">Fat</span></div>
+    </div>
+  </div>
+
+  <!-- SATURDAY -->
+
+  <div class="day-panel" id="dp-sat">
+    <div class="dhc dhc-car">
+      <div class="dhc-left"><h2>Saturday — Zone 2 Cardio</h2><p>Weekend Brunch Vibes · Steady State Cardio</p></div>
+      <div class="dhc-badges"><div class="dhc-badge">~1,500 cal</div><div class="dhc-badge">P:125g</div><div class="dhc-badge">F:20g</div><div class="dhc-badge">🚶 45–60 min</div></div>
+    </div>
+    <div class="sched-list">
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:30 AM</div><div class="si-icon ic-water">💧</div><div class="si-body"><div class="si-title">Drink 500 ml water on waking</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:45 AM</div><div class="si-icon ic-ritual">🍵</div><div class="si-body"><div class="si-title">Matcha Almond Latte</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:0g</span><span class="sm-t">T:2g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 AM</div><div class="si-icon ic-wk">🚶</div><div class="si-body"><div class="si-title">WORKOUT — Zone 2 Cardio (45–60 min)</div><div class="si-detail">Brisk walk, jog, cycling, or swim · conversational pace · target HR 120–140 bpm · 10 min cool-down + stretch</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">10:30 AM</div><div class="si-icon ic-meal">🍳</div><div class="si-body"><div class="si-title">Brunch — Shakshuka + Hard Boiled Eggs & Feta</div><div class="si-detail">Spiced tomato sauce (15 min), 2 hard boiled eggs halved on top, feta, herbs, Dave's Killer Bread</div><div class="si-macros"><span class="sm-p">P:22g</span><span class="sm-f">F:5g</span><span class="sm-t">T:16g</span><span style="color:var(--muted)">420 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">2:30 PM</div><div class="si-icon ic-meal">🥤</div><div class="si-body"><div class="si-title">Snack — Protein Smoothie</div><div class="si-detail">Blend Sunday freezer pack + almond milk + protein powder</div><div class="si-macros"><span class="sm-p">P:24g</span><span class="sm-f">F:3g</span><span class="sm-t">T:3g</span><span style="color:var(--muted)">210 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:30 PM</div><div class="si-icon ic-meal">🐟</div><div class="si-body"><div class="si-title">Dinner — Miso Butter Salmon Bowl</div><div class="si-detail">4 oz salmon, miso-butter glaze (8 min broil, no sesame), roasted cabbage & mushrooms, batch brown rice</div><div class="si-macros"><span class="sm-p">P:34g</span><span class="sm-f">F:6g</span><span class="sm-t">T:16g</span><span style="color:var(--muted)">490 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 PM</div><div class="si-icon ic-meal">🌙</div><div class="si-body"><div class="si-title">Evening — Greek Yogurt Parfait + Berries + Honey</div><div class="si-macros"><span class="sm-p">P:10g</span><span class="sm-f">F:1g</span><span class="sm-t">T:0g</span><span style="color:var(--muted)">130 cal</span></div></div><div class="si-cb2"></div></div>
+    </div>
+    <div class="day-total">
+      <div class="dt-item"><span class="dt-val">1,320</span><span class="dt-label">Meals cal</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--pro)">125g</span><span class="dt-label">Protein</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fib)">20g</span><span class="dt-label">Fiber</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fat)">47g</span><span class="dt-label">Fat</span></div>
+    </div>
+  </div>
+
+  <!-- SUNDAY -->
+
+  <div class="day-panel" id="dp-sun">
+    <div class="dhc dhc-rst">
+      <div class="dhc-left"><h2>Sunday — Rest + Meal Prep</h2><p>Prep Day · No structured workout</p></div>
+      <div class="dhc-badges"><div class="dhc-badge">~1,490 cal</div><div class="dhc-badge">P:124g</div><div class="dhc-badge">F:28g</div><div class="dhc-badge">😴 ~90 min prep</div></div>
+    </div>
+    <div class="sched-list">
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:30 AM</div><div class="si-icon ic-water">💧</div><div class="si-body"><div class="si-title">Drink 500 ml water + squeeze of lemon</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">7:45 AM</div><div class="si-icon ic-ritual">🍵</div><div class="si-body"><div class="si-title">Matcha Almond Latte</div><div class="si-macros"><span class="sm-p">P:1g</span><span class="sm-f">F:0g</span><span class="sm-t">T:2g</span><span style="color:var(--muted)">70 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:00 AM</div><div class="si-icon ic-meal">🍳</div><div class="si-body"><div class="si-title">Breakfast — Greek Yogurt + Berries + Granola</div><div class="si-detail">Quick while batch cooking starts</div><div class="si-macros"><span class="sm-p">P:18g</span><span class="sm-f">F:4g</span><span class="sm-t">T:4g</span><span style="color:var(--muted)">290 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">9:00 AM</div><div class="si-icon ic-rest">🍳</div><div class="si-body"><div class="si-title">START MEAL PREP — ~90 minutes in parallel</div><div class="si-detail">Oven on with chicken + veg · stove: eggs boiling, rice cooking, lentil soup simmering · counter: blend hummus, make dressings, freeze smoothie packs, wash & cut snack veg · everything finishes together</div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">12:30 PM</div><div class="si-icon ic-meal">🥗</div><div class="si-body"><div class="si-title">Lunch — Lentil Soup (first bowl)</div><div class="si-detail">2 cups freshly made · taste test · store the rest</div><div class="si-macros"><span class="sm-p">P:18g</span><span class="sm-f">F:14g</span><span class="sm-t">T:3g</span><span style="color:var(--muted)">380 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">3:30 PM</div><div class="si-icon ic-meal">🍎</div><div class="si-body"><div class="si-title">Snack — Apple + Almond Butter</div><div class="si-macros"><span class="sm-p">P:4g</span><span class="sm-f">F:5g</span><span class="sm-t">T:9g</span><span style="color:var(--muted)">200 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">6:00 PM</div><div class="si-icon ic-meal">🍗</div><div class="si-body"><div class="si-title">Dinner — Sheet Pan Chicken + Roasted Veg</div><div class="si-detail">One portion of the batch · veg already roasted · refrigerate the rest for Tue & Fri</div><div class="si-macros"><span class="sm-p">P:36g</span><span class="sm-f">F:6g</span><span class="sm-t">T:9g</span><span style="color:var(--muted)">470 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">8:30 PM</div><div class="si-icon ic-meal">🌙</div><div class="si-body"><div class="si-title">Evening — Cottage Cheese + Cherry Tomatoes</div><div class="si-macros"><span class="sm-p">P:14g</span><span class="sm-f">F:1g</span><span class="sm-t">T:1g</span><span style="color:var(--muted)">130 cal</span></div></div><div class="si-cb2"></div></div>
+      <div class="si2" onclick="togS(this)"><div class="si-time">9:30 PM</div><div class="si-icon ic-rest">💤</div><div class="si-body"><div class="si-title">Aim for 7–8 hours sleep — lights out by 10 PM</div><div class="si-detail">Sleep drives cortisol regulation and fat loss at 40. Prioritize it like a workout.</div></div><div class="si-cb2"></div></div>
+    </div>
+    <div class="day-total">
+      <div class="dt-item"><span class="dt-val">1,540</span><span class="dt-label">Total cal</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--pro)">124g</span><span class="dt-label">Protein</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fib)">28g</span><span class="dt-label">Fiber</span></div>
+      <div class="dt-item"><span class="dt-val" style="color:var(--fat)">44g</span><span class="dt-label">Fat</span></div>
+    </div>
+  </div>
+
+</div><!-- /panel-sched -->
+
+</div><!-- /wrap -->
+
+<script>
+// ── TAB & DAY NAVIGATION ──────────────────────────────────────────
+function switchTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+function switchDay(id, btn) {
+  document.querySelectorAll('.day-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('dp-' + id).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ── LOCALSTORAGE HELPERS ──────────────────────────────────────────
+// Each checkable element needs a stable key. We derive it from its
+// index within its parent list so no IDs need to be added to the HTML.
+function getKey(el) {
+  const list = el.closest('.shop-items, .prep-items-wrap, .sched-list');
+  if (!list) return null;
+  const siblings = Array.from(list.querySelectorAll(
+    '.shop-item, .prep-row, .si2'
+  ));
+  const idx = siblings.indexOf(el);
+  const listId = list.closest('[id]') ? list.closest('[id]').id : 'root';
+  return 'chk__' + listId + '__' + idx;
+}
+
+function saveState(el, activeClass) {
+  const key = getKey(el);
+  if (!key) return;
+  try {
+    if (el.classList.contains(activeClass)) {
+      localStorage.setItem(key, '1');
+    } else {
+      localStorage.removeItem(key);
+    }
+  } catch(e) { /* storage blocked — degrade silently */ }
+}
+
+function restoreAll() {
+  // Shopping items
+  document.querySelectorAll('.shop-item').forEach(el => {
+    const key = getKey(el);
+    if (key && localStorage.getItem(key)) el.classList.add('checked');
+  });
+  // Prep rows
+  document.querySelectorAll('.prep-row').forEach(el => {
+    const key = getKey(el);
+    if (key && localStorage.getItem(key)) el.classList.add('checked');
+  });
+  // Schedule items
+  document.querySelectorAll('.si2').forEach(el => {
+    const key = getKey(el);
+    if (key && localStorage.getItem(key)) el.classList.add('done');
+  });
+}
+
+// ── TOGGLE FUNCTIONS ─────────────────────────────────────────────
+function tog(el) {
+  el.classList.toggle('checked');
+  saveState(el, 'checked');
+}
+
+function togP(el) {
+  el.classList.toggle('checked');
+  saveState(el, 'checked');
+}
+
+function togS(el) {
+  el.classList.toggle('done');
+  saveState(el, 'done');
+}
+
+function clearShop() {
+  document.querySelectorAll('.shop-item.checked').forEach(el => {
+    el.classList.remove('checked');
+    const key = getKey(el);
+    if (key) { try { localStorage.removeItem(key); } catch(e) {} }
+  });
+}
+
+// ── RESTORE STATE ON LOAD ─────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', restoreAll);
+</script>
+
+</body>
+</html>
